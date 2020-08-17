@@ -1,0 +1,46 @@
+{
+  "name": "red-contrib-discovergy-meter",
+  "version": "0.5.1",
+  "description": "Allows to work with a Discovergy Smart Meter (Electricity only) within Node RED flows",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/energychain/node-red-contrib-discovergy-meter.git"
+  },
+  "keywords": [
+    "discovergy",
+    "smartmeter",
+    "corrently",
+    "isms",
+    "stromzähler",
+    "node-red",
+    "electricitymeter",
+    "easymeter"
+  ],
+  "author": "STROMDAO GmbH <kontakt@stromdao.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/energychain/node-red-contrib-discovergy-meter/issues"
+  },
+  "homepage": "https://github.com/energychain/node-red-contrib-discovergy-meter#readme",
+  "dependencies": {
+    "axios": "^0.19.2"
+  },
+  "funding": {
+    "type": "corporation",
+    "url": "https://www.stromdao.de/crowdfunding/info"
+  },
+  "node-red": {
+    "nodes": {
+      "Discovergy Meter": "DiscovergyMeter.js"
+    }
+  },
+  "devDependencies": {
+    "mocha": "^8.1.1",
+    "node-red": "^1.1.3",
+    "node-red-node-test-helper": "^0.2.5"
+  }
+}
