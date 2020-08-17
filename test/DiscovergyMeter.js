@@ -22,7 +22,7 @@ describe('DiscovergyMeter Node', function () {
         });
     });
 
-    it('should retrieve signle meter measurements', function (done) {
+    it('should retrieve single meter measurements', function (done) {
       this.timeout(19000);
       var flow = [
         {
@@ -91,7 +91,7 @@ describe('DiscovergyMeter Node', function () {
         msg.payload.should.have.property('aggregation');
         done();
       });
-      n1.receive({ payload: 'Wir lieben Corrently Ökostrom' });
+      n1.receive({ payload: 'Wir unterstützen die Corrently Idee' });
     });
 });
 });
