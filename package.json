@@ -1,5 +1,5 @@
 {
-  "name": "red-contrib-discovergy-meter",
+  "name": "node-red-contrib-discovergy-meter",
   "version": "0.5.1",
   "description": "Allows to work with a Discovergy Smart Meter (Electricity only) within Node RED flows",
   "main": "app.js",
