@@ -12,7 +12,7 @@ describe('DiscovergyMeter Node', function () {
       username: "demo@corrently.de",
       password: "aNPR66nGXQhZ",
       meterId: '781ffa307e434529be9f747eece1b8dc'
-    }
+    };
 
     const testBasicPropertiesOfMsg = function(msg) {
       msg.should.have.property('payload');
@@ -23,7 +23,8 @@ describe('DiscovergyMeter Node', function () {
       msg.payload.latest.should.have.property('energyOut_wh');
       msg.payload.latest.should.have.property('baseCosts');
       msg.payload.latest.should.have.property('energyCost');
-    }
+    };
+
     it('should be loaded', function (done) {
         var flow = [n1];
         helper.load(dgyMeterNode, flow, function () {
