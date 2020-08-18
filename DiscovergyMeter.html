@@ -114,5 +114,28 @@
 </script>
 
 <script type="text/x-red" data-help-name="Discovergy Meter">
-    <p>Liefert den gesammelten und den in Corrently Erzeugung getauschten Grünstrombonus. Bei einerm <a href="https://www.corrently.de/">Corrently Ökostromprodukt</a> erhält man GrünstromBonus, wenn der Strom in Zeiten bezogen wird, an denen dieser aus regionaler Erzeugung stammt.</p>
+    <p>Allows to use a Discovergy Meter with its readings to calculate measurements within the <a href="https://www.corrently.de/">Corrently Ecosystem</a>.</p>
+    <h3>Output (Standard)</h3>
+    <code>
+      msg.payload =  {
+        time: <TIME>, // time of reading per Discovergy API
+        latest: {
+          power: <POWERVALUE>,
+          power1: <POWERVALUE>,
+          power2: <POWERVALUE>,
+          power3: <POWERVALUE>,
+          energy: <ENERGYVALUE>,
+          energyOut: <ENERGYVALUE>,
+          baseCosts: <EUROVALUE>,
+          energyCost: <EUROVALUE>,
+          energyRevenue: <EUROVALUE>,
+          incomeSaldo: <EUROVALUE>
+        }
+      }
+      </code>
+      <h3>Online Support</h3>
+      <p>
+      You might reach out online using <a href="https://tawk.to/chat/5c53189451410568a109843f/default" target="_blank">our chat</a>,
+      Or refer to the <a href="https://github.com/energychain/node-red-contrib-discovergy-meter">Github Repository</a>.
+      </p>
 </script>

@@ -5,11 +5,22 @@ module.exports = function(RED) {
   function discovergyNode(config) {
       RED.nodes.createNode(this,config);
       var node = this;
-      if((typeof node.context().global.get("discovergy_username") !== 'undefined')&&( node.context().global.get("discovergy_username") !== null)) {
-          config.username = node.context().global.get("discovergy_username");
-          config.password =  node.context().global.get("discovergy_password");
-      }
+
       node.on('input', async function(msg) {
+        // hack for global configuration options
+        if((typeof node.context().global.get("discovergy_username") !== 'undefined')&&( node.context().global.get("discovergy_username") !== null)) {
+            config.username = node.context().global.get("discovergy_username");
+            config.password =  node.context().global.get("discovergy_password");
+            config.revenue = node.context().global.get("discovergy_revenue") * 1;
+            config.meterId = node.context().global.get("discovergy_meterId");
+            if(config.meterId == '781ffa307e434529be9f747eece1b8dc') {
+              config.amortization = 1700;
+              config.firstReadingDate = "2017-01-01";
+              config.firstReading = 4614000;
+              config.firstReadingOut = 3915000;
+            }
+
+        }
         msg.payload = await discovergyLib(msg,config,node.context(),RED);
         node.send(msg);
       });
