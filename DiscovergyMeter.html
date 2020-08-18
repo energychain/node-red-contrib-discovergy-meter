@@ -46,7 +46,8 @@
             firstReadingOut: {value: 0,required:true},
             firstReadingDate: {value: null,required:false},
             isProduction: {value: false,required:true},
-            revenue: {value: 0,required:true}
+            revenue: {value: 0,required:true},
+            amortization: {value: 0,required:true}
         },
         inputs:1,
         outputs:1,
@@ -105,6 +106,10 @@
     <div class="form-row">
           <label for="node-input-revenue"><i class="icon-tag"></i> revenue per kWh (Generation)</label>
           <input type="number" id="node-input-revenue" name="node-input-revenue" placeholder="(0.12)">
+    </div>
+    <div class="form-row">
+          <label for="node-input-amortization"><i class="icon-tag"></i> amortization per year</label>
+          <input type="number" id="node-input-amortization" name="node-input-amortization" placeholder="(2500)">
     </div>
 </script>
 

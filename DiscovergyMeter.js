@@ -5,6 +5,10 @@ module.exports = function(RED) {
   function discovergyNode(config) {
       RED.nodes.createNode(this,config);
       var node = this;
+      if((typeof node.context().global.get("discovergy_username") !== 'undefined')&&( node.context().global.get("discovergy_username") !== null)) {
+          config.username = node.context().global.get("discovergy_username");
+          config.password =  node.context().global.get("discovergy_password");
+      }
       node.on('input', async function(msg) {
         msg.payload = await discovergyLib(msg,config,node.context(),RED);
         node.send(msg);
