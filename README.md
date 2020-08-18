@@ -77,6 +77,12 @@ msg.payload =  {
   aggregation: { ... } // Aggregated values of all meters in sequence
 }
 ```
+## Sample flows
+
+### Messkonzept 2 (Überschußeinspeisung) ohne Z2 (Produktionszähler)
+
+[Dashboard](https://flows.nodered.org/flow/6f43f7d48405927ab3231ef1eea38a96)
+
 
 ## Funding
 This module is part of the Corrently Ecosystem which looks for funding in Germany:  https://www.stromdao.de/crowdfunding/info
