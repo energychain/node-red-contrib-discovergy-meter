@@ -47,7 +47,9 @@
             firstReadingDate: {value: null,required:false},
             isProduction: {value: false,required:true},
             revenue: {value: 0,required:true},
-            amortization: {value: 0,required:true}
+            amortization: {value: 0,required:true},
+            prodMeterId: {value: null,required:false},
+            firstReadingProd: {value: 0,required:true}
         },
         inputs:1,
         outputs:1,
@@ -61,6 +63,7 @@
                     var meters = JSON.parse(data);
                     for(let i=0;i<meters.length;i++) {
                         $('#node-input-meterId').append('<option value="' + meters[i].meterId + '">' + meters[i].fullSerialNumber  + '</option>').val(node.meterId);
+                        $('#node-input-prodMeterId').append('<option value="' + meters[i].meterId + '">' + meters[i].fullSerialNumber  + '</option>').val(node.meterId);
                     }
               });
 
@@ -102,6 +105,14 @@
     <div class="form-row">
           <label for="node-input-isProduction"><i class="icon-tag"></i> is Production Meter (Generation)</label>
           <input type="checkbox" id="node-input-isProduction" name="node-input-isProduction">
+    </div>
+    <div class="form-row">
+          <label for="node-input-prodMeterId"><i class="icon-tag"></i> Production Meter</label>
+          <select id="node-input-prodMeterId" name="node-input-prodMeterId" style="width: 250px;"></select>
+    </div>
+    <div class="form-row">
+          <label for="node-input-firstReadingProd"><i class="icon-tag"></i> First Reading Production (wh)</label>
+          <input type="text" id="node-input-firstReadingProd" name="node-input-firstReadingProd">
     </div>
     <div class="form-row">
           <label for="node-input-revenue"><i class="icon-tag"></i> revenue per kWh (Generation)</label>

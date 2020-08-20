@@ -18,6 +18,8 @@ module.exports = function(RED) {
               config.firstReadingDate = "2017-01-01";
               config.firstReading = 4614000;
               config.firstReadingOut = 3915000;
+              config.firstReadingProd = 21260000;
+              config.prodMeterId = '303fbb8ca6404ebba48c196b4dbbc176';
             }
 
         }
