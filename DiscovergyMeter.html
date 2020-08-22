@@ -63,7 +63,7 @@
                     var meters = JSON.parse(data);
                     for(let i=0;i<meters.length;i++) {
                         $('#node-input-meterId').append('<option value="' + meters[i].meterId + '">' + meters[i].fullSerialNumber  + '</option>').val(node.meterId);
-                        $('#node-input-prodMeterId').append('<option value="' + meters[i].meterId + '">' + meters[i].fullSerialNumber  + '</option>').val(node.meterId);
+                        $('#node-input-prodMeterId').append('<option value="' + meters[i].meterId + '">' + meters[i].fullSerialNumber  + '</option>').val(node.prodMeterId);
                     }
               });
 
