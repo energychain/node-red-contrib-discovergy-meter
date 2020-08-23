@@ -26,7 +26,7 @@ This QuickStart allows you to start node-red with one the sample meters to get q
 Reference: https://casa.corrently.de/books/demo-z%C3%A4hler/page/messkonzept-1-%28volleinspeisung%29
 
 ```shell
-npm install
+npm install node-red-dashboard
 npm run demo-messkonzept1
 ```
 
@@ -34,7 +34,7 @@ npm run demo-messkonzept1
 Reference: https://casa.corrently.de/books/demo-z%C3%A4hler/page/messkonzept-2-%28%C3%BCberschusseinspeisung%29
 
 ```shell
-npm install
+npm install node-red-dashboard
 npm run demo-messkonzept2
 ```
 
