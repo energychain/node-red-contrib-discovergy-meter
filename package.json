@@ -4,7 +4,9 @@
   "description": "Allows to work with a Discovergy Smart Meter (Electricity only) within Node RED flows",
   "main": "app.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "demo-messkonzept1": "node-red ./flows/demo_messkonzept1.json",
+    "demo-messkonzept2": "node-red ./flows/demo_messkonzept2.json"
   },
   "repository": {
     "type": "git",

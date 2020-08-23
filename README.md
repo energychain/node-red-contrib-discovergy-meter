@@ -15,6 +15,34 @@ npm install --save node-red-contrib-discovergy-meter
 ### Node-RED (Node) via Editor
 Install `node-red-contrib-discovergy-meter` as NODE package.
 
+## QuickStart
+This QuickStart allows you to start node-red with one the sample meters to get quickly familiar with this Node (module).
+
+### Prerequisites
+- Node-RED installed global (e.q you could start it from command line using `node-red`)
+- Cloned version of GIT Repository https://github.com/energychain/node-red-contrib-discovergy-meter.git
+
+### Corrently Demo Meter(s) - Full generation (Messkonzept1 - Volleinspeisung)
+Reference: https://casa.corrently.de/books/demo-z%C3%A4hler/page/messkonzept-1-%28volleinspeisung%29
+
+```shell
+npm install
+npm run demo-messkonzept1
+```
+
+### Corrently Demo Meter(s) - surplus feed-in (Messkonzept2 - Überschusseinspeisung)
+Reference: https://casa.corrently.de/books/demo-z%C3%A4hler/page/messkonzept-2-%28%C3%BCberschusseinspeisung%29
+
+```shell
+npm install
+npm run demo-messkonzept2
+```
+
+### Accessing Demo
+ - Editor: http://localhost:1880/
+ - Dashboard (UI): http://localhost:1880/ui
+
+###
 
 ## Usage
 ### First time usage
