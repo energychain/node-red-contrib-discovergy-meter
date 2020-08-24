@@ -21,7 +21,6 @@ module.exports = function(RED) {
               config.firstReadingProd = 21260000;
               config.prodMeterId = '303fbb8ca6404ebba48c196b4dbbc176';
             }
-
         }
         msg.payload = await discovergyLib(msg,config,node.context(),RED);
         node.send(msg);
