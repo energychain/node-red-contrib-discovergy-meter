@@ -112,9 +112,18 @@ msg.payload =  {
 [Dashboard](https://flows.nodered.org/flow/6f43f7d48405927ab3231ef1eea38a96)
 
 ## Standalone usage
-It is possible to run this node without Node-RED. It comes shipped with
+It is possible to run this node without Node-RED. It comes shipped with a express APP.
+
+```shell
+git clone https://github.com/energychain/node-red-contrib-discovergy-meter.git
+cd node-red-contrib-discovergy-meter.git
+npm install
+npm start ./sample_config_messkonzept2.json
+```
 
 ![Prosumer Display](https://squad.stromdao.de/nextcloud/index.php/s/EjaBaya9WPgcRzw/preview)
+
+By default the Web UI will be visible at http://localhost:3000/index.html
 
 ## Funding
 This module is part of the Corrently Ecosystem which looks for funding in Germany:  https://www.stromdao.de/crowdfunding/info
