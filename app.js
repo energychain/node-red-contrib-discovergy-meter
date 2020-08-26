@@ -28,6 +28,11 @@ const main = async function(config) {
   });
 
   app.use(express.static('public', {}));
+
+  setInterval(function() {
+    delete msg.payload.latest;
+    discovergyLib(msg,config,storage);
+  },900000);
   console.log("Serving http://localhost:"+port +"/");
   app.listen(port);
 }
