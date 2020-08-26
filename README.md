@@ -123,6 +123,9 @@ npm start ./sample_config_messkonzept2.json
 
 ![Prosumer Display](https://squad.stromdao.de/nextcloud/index.php/s/EjaBaya9WPgcRzw/preview)
 
+Online Demo (via Heroku):
+https://casa-corrently-demo.herokuapp.com/index.html
+
 By default the Web UI will be visible at http://localhost:3000/index.html
 
 ## Funding
