@@ -72,56 +72,40 @@ nur Corrently kann Dir sagen, wann wie viel grüner Strom in Deiner Region erzeu
                     <li class="nav-item" role="presentation"><a class="nav-link active" style="color: rgba(255,255,255,0.9);font-family: 'DIN Alternate Bold';" href="./index.html">Start</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link active" style="color: rgba(255,255,255,0.9);font-family: 'DIN Alternate Bold';" href="./strompreis.html">Preis</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="./stromkosten.html" style="color: rgb(255,255,255);margin-right: 15px;margin-left: 15px;font-family: 'DIN Alternate Bold';">Kosten</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="configuration.html" style="color: rgb(255,255,255);margin-right: 15px;margin-left: 15px;font-family: 'DIN Alternate Bold';">Einstellungen</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="configuration.html" style="color: rgb(255,255,255);margin-right: 15px;margin-left: 15px;font-family: 'DIN Alternate Bold';">Einstellungen</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="https://tawk.to/chat/5c53189451410568a109843f/default" style="color: rgb(255,255,255);font-family: 'DIN Alternate Bold';">Hilfe (Chat)</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container" id="app" style="background-color: #ffffff;margin-top: 25px;margin-bottom: 25px;box-shadow: 0px 0px 20px 20px rgba(0,0,0,0.18);min-height: 600px;">
-        <div class="row">
-            <div class="col">
-                <h1 style="margin-top: 25px;font-family: 'DIN Alternate Bold';"><strong>Was ist mein Strompreis?</strong><br></h1>
+    <div class="container" id="app" style="background-color: #ffffff;margin-top: 25px;margin-bottom: 25px;box-shadow: 0px 0px 20px 20px rgba(0,0,0,0.18);min-height: 600px;padding-top: 20px;padding-bottom: 20px;">
+        <h1 style="margin-top: 25px;font-family: 'DIN Alternate Bold';margin-bottom: 25px;"><strong>Einstellungen</strong><br></h1>
+        <h3 style="margin-top: 25px;font-family: 'DIN Alternate Bold';margin-bottom: 25px;"><strong>Discovergy Zugangsdaten</strong><br></h3>
+        <form id="configFrm" action="/config" method="post">
+            <div class="form-group"><label>Discovergy MeterId (Netzanschluß)</label><input class="form-control" type="text" id="meterId" name="meterId"></div>
+            <div class="form-group"><label>Discovergy Portal Benutzernamen</label><input class="form-control" type="text" id="username" name="username"></div>
+            <div class="form-group"><label>Discovergy Portal Passwort</label><input class="form-control" type="password" id="password" name="password"></div>
+            <hr>
+            <h3 style="margin-top: 25px;font-family: 'DIN Alternate Bold';margin-bottom: 25px;"><strong>Stammdaten des Zählers</strong><br></h3>
+            <div class="form-group"><label>Anfangszählerstand Bezug (in Wattstunden)</label><input class="form-control" type="text" id="firstReading" inputmode="numeric" name="firstReading"></div>
+            <div class="form-group"><label>Anfangszählerstand Einspeisung (in Wattstunden)</label><input class="form-control" type="text" id="firstReadingOut" inputmode="numeric" name="firstReadingOut"></div>
+            <div class="form-group"><label>Datum der ersten Ablesung</label><input class="form-control" id="firstReadingDate" type="date" name="firstReadingDate"></div>
+            <div class="form-group"><label>Einspeisevergütung in Euro</label><input class="form-control" type="text" id="revenue" inputmode="numeric" name="revenue"></div>
+            <div class="form-group"><label>Jährliche Kosten (inkl. Abschreibung)</label><input class="form-control" type="text" id="amortization" inputmode="numeric" name="amortization"></div>
+            <div class="form-group"><label>Discovergy MeterId (Produktionszähler)</label><input class="form-control" type="text" id="prodMeterId" name="prodMeterId"></div>
+            <div class="form-group"><label>Anfangszählerstand Produktion (in Wattstunden)</label><input class="form-control" type="text" id="firstReadingProd" inputmode="numeric" name="firstReadingProd"></div>
+            <div class="form-group">
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="isProduction" name="isProduction"><label class="form-check-label" for="formCheck-1">Messkonzept 1 (Volleinspeisung)</label></div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h3 style="margin-top: 25px;font-family: 'DIN Alternate Bold';">in den letzten 24 Stunden<br></h3>
+            <hr>
+            <h3 style="margin-top: 25px;font-family: 'DIN Alternate Bold';margin-bottom: 25px;"><strong>Corrently Daten</strong><br></h3>
+            <div class="form-group"><label>Zugehörige Gemeinschaft</label><input class="form-control" type="text" id="community" inputmode="numeric" name="community"></div>
+            <div class="form-group"><label>Corrently Stromkonto</label><input class="form-control" type="text" id="stromkonto" inputmode="numeric" name="stromkonto"></div>
+            <div class="form-group"><label>Corrently Depotkonto</label><input class="form-control" type="text" id="depot" inputmode="numeric" name="depot"></div>
+            <div class="btn-toolbar d-xl-flex justify-content-xl-center">
+                <div class="btn-group" role="group"><button class="btn btn-primary" type="reset">Abbrechen</button><button class="btn btn-primary" type="submit"><strong>Speichern</strong></button></div>
             </div>
-            <div class="col text-center d-flex align-items-baseline">
-                <h4 class="text-right flex-fill align-items-xl-end display-4" style="font-family: 'DIN Alternate Bold';"><span id="last24h" style="color: rgb(12,107,51);">-</span><span class="attributierung"><span style="font-size: 24px;">/kwh</span></span>
-                </h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h3 style="margin-top: 25px;font-family: 'DIN Alternate Bold';">in den letzten 7 Tagen<br></h3>
-            </div>
-            <div class="col text-center d-flex align-items-baseline">
-                <h4 class="text-right flex-fill align-items-xl-end display-4" style="font-family: 'DIN Alternate Bold';"><span id="last7d" style="color: rgb(12,107,51);">-</span><span class="attributierung"></span><span style="font-size: 24px;">/kwh</span></h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h3 style="margin-top: 25px;font-family: 'DIN Alternate Bold';">in den letzten 30 Tagen<br></h3>
-            </div>
-            <div class="col text-center d-flex align-items-baseline">
-                <h4 class="text-right flex-fill align-items-xl-end display-4" style="font-family: 'DIN Alternate Bold';"><span id="last30d" style="color: rgb(12,107,51);">-</span><span class="attributierung"></span><span style="font-size: 24px;">/kwh</span></h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h3 style="margin-top: 25px;font-family: 'DIN Alternate Bold';">in den letzten 365 Tagen<br></h3>
-            </div>
-            <div class="col text-center d-flex align-items-baseline">
-                <h4 class="text-right flex-fill align-items-xl-end display-4" style="font-family: 'DIN Alternate Bold';"><span id="last365d" style="color: rgb(12,107,51);">-</span><span class="attributierung"></span><span style="font-size: 24px;">/kwh</span></h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h6 class="text-center text-black-50" style="margin-top: 25px;font-family: 'DIN Alternate Bold';"><strong>Stand:&nbsp;</strong><span class="updateTS">-</span>&nbsp;(Durchschnittspreise, Angaben in Cent)</h6>
-            </div>
-        </div>
+        </form>
     </div>
     <div class="footer-basic">
         <footer>
@@ -147,7 +131,7 @@ nur Corrently kann Dir sagen, wann wie viel grüner Strom in Deiner Region erzeu
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
     <script src="https://elements.corrently.io/dist/correntlyElements-min.js"></script>
     <script src="assets/js/script.min.js"></script>
-    <script src="assets/js/render.min.js"></script>
+    <script src="assets/js/config.min.js"></script>
 </body>
 
 </html>

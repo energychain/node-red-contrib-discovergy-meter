@@ -1,6 +1,8 @@
 const discovergyLib = require("./lib/discovergy.js");
 const fs = require("fs");
 const express = require('express');
+const bodyParser = require('body-parser');
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
 let port = 3000;
 
 const storage = {
@@ -25,6 +27,15 @@ const main = async function(config) {
   app.get('/msg', async function (req, res) {
       delete msg.payload.latest;
       res.send(await discovergyLib(msg,config,storage));
+  });
+
+  app.get('/config', async function (req, res) {
+      res.send(config);
+  });
+
+  app.post('/config',urlencodedParser,async function(req,res) {
+      config = req.body;
+      res.send();
   });
 
   app.use(express.static('public', {}));
