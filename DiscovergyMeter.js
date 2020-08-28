@@ -22,6 +22,9 @@ module.exports = function(RED) {
               config.prodMeterId = '303fbb8ca6404ebba48c196b4dbbc176';
             }
         }
+        if(typeof config.uuid == 'undefined') {
+          config.uuid = config.meterId;
+        }
         msg.payload = await discovergyLib(msg,config,node.context(),RED);
         node.send(msg);
       });

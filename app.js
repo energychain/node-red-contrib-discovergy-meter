@@ -26,7 +26,8 @@ const main = async function(config) {
 
   app.get('/msg', async function (req, res) {
       delete msg.payload.latest;
-      res.send(await discovergyLib(msg,config,storage));
+      const result = await discovergyLib(msg,config,storage);
+      res.send(result);
   });
 
   app.get('/config', async function (req, res) {
@@ -53,6 +54,7 @@ const boot = async function() {
   if(typeof process.env.PORT !== 'undefined') {
     port = process.env.PORT;
   }
+  // UUID Persistence
   if((process.argv.length == 3)&&(await fileExists(process.argv[2]))) {
     config = JSON.parse(fs.readFileSync(process.argv[2]));
   } else
@@ -61,6 +63,10 @@ const boot = async function() {
   } else
   if(await fileExists("./sample_config.json")) {
     config = JSON.parse(fs.readFileSync("./sample_config.json"));
+  }
+  if(typeof config.uuid == 'undefined') {
+    config.uuid = Math.random(); // Due to node js incompatibility with nanoid or uuid this is a bad fix
+    config.uuid = (""+config.uuid).substring(2) + (Math.random());
   }
   main(config);
 }
