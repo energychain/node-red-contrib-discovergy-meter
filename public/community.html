@@ -83,7 +83,27 @@ nur Corrently kann Dir sagen, wann wie viel grüner Strom in Deiner Region erzeu
             <div class="col">
                 <h1 style="margin-top: 25px;font-family: 'DIN Alternate Bold';"><strong>Strompreis in der Community</strong><br></h1>
             </div>
-        </div><canvas id='communityChart' width="100%" height="100%"></canvas></div>
+        </div>
+        <div class="table-responsive table-bordered dbt" id="cmtable" style="margin-top:40px;">
+            <table class="table table-striped table-bordered table-sm">
+                <thead>
+                    <tr>
+                        <th>Strompreis je kWh</th>
+                        <th>24 Stunden</th>
+                        <th>7 Tage</th>
+                        <th>&nbsp;30 Tage</th>
+                        <th>&nbsp;365 Tage</th>
+                    </tr>
+                </thead>
+                <tbody id="ctable"></tbody>
+            </table>
+        </div><canvas id='communityChart' width="100%" height="100%"></canvas>
+        <div class="row" style="margin-top:40px;">
+            <div class="col">
+                <h6 class="text-center text-black-50" style="margin-top: 25px;font-family: 'DIN Alternate Bold';">Nur zur Information, Keine Abrechnung.</h6>
+            </div>
+        </div>
+    </div>
     <div class="footer-basic">
         <footer>
             <div class="social"><a class="border rounded-circle" data-bs-hover-animate="pulse" href="https://www.instagram.com/corrently.energy/"><i class="icon ion-social-instagram"></i></a><a data-bs-hover-animate="pulse" href="https://www.facebook.com/stromdaoltd/"><i class="icon ion-social-facebook"></i></a>
@@ -108,6 +128,8 @@ nur Corrently kann Dir sagen, wann wie viel grüner Strom in Deiner Region erzeu
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
     <script src="https://elements.corrently.io/dist/correntlyElements-min.js"></script>
     <script src="assets/js/script.min.js"></script>
+    <script src="assets/js/jquery.dataTables.min.min.js"></script>
+    <script src="assets/js/dataTables.bootstrap4.min.min.js"></script>
     <script src="assets/js/communityRadar.min.js"></script>
 </body>
 
