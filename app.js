@@ -1,4 +1,4 @@
-const discovergyLib = require("./lib/discovergy.js");
+const discovergyLib = require("./lib/meter.js");
 const fs = require("fs");
 const express = require('express');
 const bodyParser = require('body-parser');

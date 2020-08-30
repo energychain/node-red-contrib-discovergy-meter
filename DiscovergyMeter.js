@@ -1,6 +1,6 @@
 module.exports = function(RED) {
   const axios = require("axios");
-  const discovergyLib = require("./lib/discovergy.js");
+  const discovergyLib = require("./lib/meter.js");
 
   function discovergyNode(config) {
       RED.nodes.createNode(this,config);
