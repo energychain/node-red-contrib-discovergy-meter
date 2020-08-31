@@ -40,8 +40,10 @@ module.exports = async function() {
           config = req.body;
           res.send();
       });
-
-      app.use(express.static('./public', {}));
+      if(typeof config.staticFiles == 'undefined') {
+        config.staticFiles = './public';
+      }
+      app.use(express.static(config.staticFiles, {}));
 
       setInterval(function() {
         delete msg.payload.latest;

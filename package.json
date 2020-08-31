@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-discovergy-meter",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "Allows to work with a Discovergy Smart Meter (Electricity only) within Node RED flows",
   "main": "app.js",
   "scripts": {
