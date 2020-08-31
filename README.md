@@ -127,6 +127,10 @@ https://casa-corrently-demo.herokuapp.com/index.html
 
 By default the Web UI will be visible at http://localhost:3000/index.html
 
+### One Click Deployment
+Heroku:
+https://heroku.com/deploy?template=https://github.com/energychain/node-red-contrib-discovergy-meter
+
 ## Funding
 This module is part of the Corrently Ecosystem which looks for funding in Germany:  https://www.stromdao.de/crowdfunding/info
 ![STROMDAO - Corrently Crowdfunding](https://squad.stromdao.de/nextcloud/index.php/s/Do4pzpM7KndZxAx/preview)
@@ -153,5 +157,3 @@ Handelsregister: HRB 728691 (Amtsgericht Mannheim)
 
 ## LICENSE
 Apache-2.0
-
-https://heroku.com/deploy?template=https://github.com/energychain/node-red-contrib-discovergy-meter
