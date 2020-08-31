@@ -51,9 +51,12 @@ module.exports = async function() {
       app.listen(port);
     }
 
-
     if(typeof process.env.PORT !== 'undefined') {
-        port = process.env.PORT;
+      port = process.env.PORT;
+    }
+
+    if(typeof config.port !== 'undefined') {
+      post = config.port;
     }
     main(config);
   }
