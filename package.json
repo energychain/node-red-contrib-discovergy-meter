@@ -1,16 +1,16 @@
 {
   "name": "node-red-contrib-discovergy-meter",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Allows to work with a Discovergy Smart Meter (Electricity only) within Node RED flows",
   "main": "app.js",
   "scripts": {
     "test": "mocha",
     "demo-messkonzept1": "node-red ./flows/demo_messkonzept1.json",
     "demo-messkonzept2": "node-red ./flows/demo_messkonzept2.json",
-    "start": "node app.js",
-    "standalone-messkonzept0": "node app.js ./flows/demo_messkonzept0.json",
-    "standalone-messkonzept1": "node app.js ./flows/demo_messkonzept1.json",
-    "standalone-messkonzept2": "node app.js ./flows/demo_messkonzept2.json"
+    "start": "node standalone.js",
+    "standalone-messkonzept0": "node standalone.js ./flows/demo_messkonzept0.json",
+    "standalone-messkonzept1": "node standalone.js ./flows/demo_messkonzept1.json",
+    "standalone-messkonzept2": "node standalone.js ./flows/demo_messkonzept2.json"
   },
   "repository": {
     "type": "git",
