@@ -72,7 +72,7 @@ nur Corrently kann Dir sagen, wann wie viel grüner Strom in Deiner Region erzeu
                     <li class="nav-item" role="presentation"><a class="nav-link active secondNavLink" href="./index.html"><i class="fa fa-home"></i></a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link active secondNavLink" href="./stromkosten.html"><i class="fa fa-balance-scale"></i></a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link secondNavLink" href="./community.html"><i class="fa fa-group"></i></a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link secondNavLink" href="./gsi.html"><i class="fa fa-leaf"></i></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active secondNavLink" href="./gsi.html"><i class="fa fa-leaf"></i></a></li>
                     <li class="nav-item" role="presentation"></li>
                     <li class="nav-item" role="presentation"><a class="nav-link secondNavLink" href="https://tawk.to/chat/5c53189451410568a109843f/default"><i class="fa fa-wechat"></i></a></li>
                 </ul>
@@ -80,58 +80,15 @@ nur Corrently kann Dir sagen, wann wie viel grüner Strom in Deiner Region erzeu
         </div>
     </nav>
     <div class="container" id="app" style="background-color: #ffffff;margin-top: 25px;margin-bottom: 25px;box-shadow: 0px 0px 20px 20px rgba(0,0,0,0.18);min-height: 600px;">
-        <div class="row">
+        <div class="row" style="margin-top:40px">
             <div class="col">
-                <div class="dropdown"><button class="btn btn-light btn-lg dropdown-toggle" data-toggle="dropdown" aria-expanded="false" id="selectorLabel" type="button">Auswertung der letzten&nbsp;</button>
-                    <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="?s=last24h">24 Stunden</a><a class="dropdown-item" role="presentation" href="?s=last7d">7 Tage</a><a class="dropdown-item" role="presentation" href="?s=last30d">30 Tage</a><a class="dropdown-item"
-                            role="presentation" href="?s=last365d">365 Tage</a></div>
-                </div>
+                <h1 style="margin-top: 25px;font-family: 'DIN Alternate Bold';"><strong>GrünstromIndex&nbsp;</strong><span id="fortext"></span><br></h1>
             </div>
         </div>
-        <div class="row" style="margin-top:20px;">
-            <div class="col-md-6 col-lg-6 col-xl-6">
-                <div class="card shadow-sm rounded">
-                    <div class="card-header bg-white">
-                        <h3 style="font-family: 'DIN Alternate Bold';">Strompreis<br></h3>
-                    </div>
-                    <div class="card-body">
-                        <h4 class="text-center display-3" style="font-family: 'DIN Alternate Bold';"><i class="material-icons" id="priceUp" style="display:none">arrow_drop_up</i><i class="material-icons" id="priceDown" style="display:none">arrow_drop_down</i><span id="energyPrice_kwh">-</span><span class="attributierung" style="min-width: 70px;"><span style="font-size: 22px;min-width: 70px;">¢/kWh</span></span>
-                        </h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-6 col-xl-6">
-                <div class="card shadow-sm rounded">
-                    <div class="card-header bg-white">
-                        <h3 style="font-family: 'DIN Alternate Bold';">Stromkosten</h3>
-                    </div>
-                    <div class="card-body">
-                        <h4 class="text-center display-3" style="font-family: 'DIN Alternate Bold';"><i class="material-icons" id="costUp" style="display:none">arrow_drop_up</i><i class="material-icons" id="costDown" style="display:none">arrow_drop_down</i><span id="incomeSaldo">-</span><span class="attributierung" style="min-width: 70px;"><span style="font-size: 22px;min-width: 70px;">EUR</span></span>
-                        </h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row" style="margin-top:20px;">
-            <div class="col-lg-6 col-xl-6">
-                <h3 style="font-family: 'DIN Alternate Bold';">Ausgaben</h3><canvas id='ausgabenChart' width="600" height="400"></canvas></div>
-            <div class="col-lg-6 col-xl-6">
-                <h3 style="font-family: 'DIN Alternate Bold';">Einnahmen</h3><canvas id='einnahmenChart' width="600" height="400"></canvas></div>
-        </div>
-        <div id="info" class="blog-slider fade in" style="margin-top:50px;">
-            <div class="blog-slider__wrp swiper-wrapper">
-                <div class="blog-slider__item swiper-slide">
-                    <div></div>
-                    <div class="blog-slider__content"><div class="blog-slider__title"><i class="fa fa-info-circle" style="margin-right: 10px;"></i>Ausgaben</div><div class="blog-slider__text" id="info0">
-    <span id="info01">-</span>% der Kosten von <span id="info02">-</span>€ für die Stromversorgung sind variabel, d.h. können durch den Verbrauch unmittelbar beeinflusst werden.
-</div></div>
-                </div>
-                <div class="blog-slider__pagination"></div>
-            </div>
-        </div>
+        <div id="gsiChart"></div>
         <div class="row" style="margin-top:40px;">
             <div class="col">
-                <h6 class="text-center text-black-50" style="margin-top: 25px;font-family: 'DIN Alternate Bold';"><strong>Stand:&nbsp;</strong><span class="updateTS">-</span>&nbsp;- Nur zur Information, Keine Abrechnung.</h6>
+                <h6 class="text-center text-black-50" style="margin-top: 25px;font-family: 'DIN Alternate Bold';">Nur zur Information, Keine Abrechnung.</h6>
             </div>
         </div>
     </div>
@@ -159,7 +116,7 @@ nur Corrently kann Dir sagen, wann wie viel grüner Strom in Deiner Region erzeu
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
     <script src="https://elements.corrently.io/dist/correntlyElements-min.js"></script>
     <script src="assets/js/script.min.js"></script>
-    <script src="assets/js/render.min.js"></script>
+    <script src="assets/js/gsi.min.js"></script>
 </body>
 
 </html>
