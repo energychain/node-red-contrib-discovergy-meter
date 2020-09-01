@@ -37,4 +37,4 @@ module.exports = function(RED) {
 
     }
   RED.nodes.registerType("Available Meters",metersNode);
-}
+};

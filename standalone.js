@@ -24,6 +24,6 @@ const boot = async function() {
   }
   const main = await CasaCorrently();
   await main.server(config);
-}
+};
 
 boot();

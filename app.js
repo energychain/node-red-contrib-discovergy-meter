@@ -16,7 +16,7 @@ module.exports = async function() {
       set:function(key,value) {
         this.memstorage[key] = value;
       }
-    }
+    };
 
     const main = async function(config) {
       let app = express();
@@ -24,7 +24,7 @@ module.exports = async function() {
       let msg = {
         payload: {},
         topic: 'statistics'
-      }
+      };
 
       app.get('/msg', async function (req, res) {
           delete msg.payload.latest;
@@ -51,7 +51,7 @@ module.exports = async function() {
       },900000);
       console.log("Serving http://localhost:"+port +"/");
       app.listen(port);
-    }
+    };
 
     if(typeof process.env.PORT !== 'undefined') {
       port = process.env.PORT;
@@ -61,6 +61,6 @@ module.exports = async function() {
       post = config.port;
     }
     main(config);
-  }
+  };
   return instance;
 };
