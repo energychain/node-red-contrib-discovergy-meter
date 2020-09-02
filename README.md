@@ -1,7 +1,10 @@
-# node-red-contrib-discovergy-meter
-Allows to work with a Discovergy Smart Meter (Electricity only) within Node RED flows. If you do not have a Discovergy Meter you might get it [here from STROMDAO](https://www.corrently.de/transparenz/bestellung-smartmeter/).
+# casa-corrently
+Allows to work with a smartmeters (Electricity only) within Node RED flows. If you do not have a Smart Meter you might get it [here from STROMDAO](https://www.corrently.de/transparenz/bestellung-smartmeter/) (Germany only).
 
 ![npm](https://img.shields.io/npm/dw/node-red-contrib-discovergy-meter) [![Build Status](https://travis-ci.com/energychain/node-red-contrib-discovergy-meter.svg?branch=master)](https://travis-ci.com/energychain/node-red-contrib-discovergy-meter) [![Code Quality](https://www.code-inspector.com/project/12360/score/svg)](https://frontend.code-inspector.com/public/project/12360/node-red-contrib-discovergy-meter/dashboard) [![chat](https://img.shields.io/badge/chat-support-brightgreen)](https://tawk.to/chat/5c53189451410568a109843f/default)
+
+## NOTE: new name
+This package gets renamed into casa-corrently - Previous: //node-red-contrib-discovergy-meter//
 
 ## Installation
 
